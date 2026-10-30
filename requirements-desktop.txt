@@ -1,0 +1,6 @@
+# Python 3.12 ; moteur installé séparément en mode éditable.
+PySide6-Essentials==6.12.0
+PyInstaller==6.22.3
+pytest==9.2.0
+pytest-mock==3.17.0
+pytest-qt==4.5.0

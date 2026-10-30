@@ -1,0 +1,20 @@
+name: Ikabot Desktop Windows
+on:
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: windows-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Tester et compiler
+        shell: pwsh
+        run: ./tools/build_windows.ps1
+      - uses: actions/upload-artifact@v4
+        with:
+          name: IkabotDesktop-Windows-x64
+          path: dist/IkabotDesktop-Windows-x64.zip
